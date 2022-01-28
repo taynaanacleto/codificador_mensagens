@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Codificador de Texto</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="title">Codificador de Texto </h1>
+    </div>
+
+    <div class="container">
+        <section>
+            <div class="box-msg">
+                <form action="">
+                    <p>DIGITE AQUI A MENSAGEM QUE VOCÊ DESEJA CRIPTOGRAFAR</p>
+                    <p><strong>Atençao: </strong><br>Não são permitidos letras maiúsculas, números e caracteres especiais.</p>
+                   <br>
+                    <input class="text-input" type="text" id="input-texto" placeholder="insira o texto aqui">
+                    <button class="btn" type="submit" id="btn-cripto">Criptografar</button>
+                    <button class="btn" type="submit" id="btn-descripto">Descriptografar</button>
+                </form>
+            </div>
+
+             <!---------------- Mensagem criptografada ------------------>
+
+            <div class="caixa-msg">
+                <div>
+                    <p> Mensagem Criptografada </p>
+                    <div class="imagem">
+                        <img src="./assets/mega-creator1.png">
+                    </div>
+                    <input class="text-input" type="text" id="msg">
+                    <button class="btn" id="copiar" type="submit">copiar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+<br>
+    <footer class="footer">
+        <p> &copy;2021 Desenvolvido por Tayná Anacleto Grilo</p>
+    </footer>
+
+</body>
+</html>
