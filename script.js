@@ -66,7 +66,6 @@ btnDescripto.addEventListener('click', function(e){
 })
 
 /*****  botão copiar ******/
- 
 var btnCopiar = document.getElementById('copiar');
 
     btnCopiar.addEventListener('click',function(e){
