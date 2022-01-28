@@ -65,17 +65,13 @@ btnDescripto.addEventListener('click', function(e){
     exibeDesCripto.value = converteTexto(textoCapturado);
 })
 
-// var btnCopy = document.getElementById('copiar');
+/*****  botão copiar ******/
+ 
+var btnCopiar = document.getElementById('copiar');
 
-/*****  função copiar ******/
- btnCopy.addEventListener('click', function(e){
-    e.preventDefault();
-    document.getElementById('msg').select();
-     document.execCommand('copy');
+    btnCopiar.addEventListener('click',function(e){
+        e.preventDefault();
 
-
-function copyText() {
-    var copyText = document.getElementById("msg");
-    navigator.clipboard.writeText(copyText.value);
-
-     }
+        document.querySelector("#msg").select();
+        document.execCommand("copy");
+    })
