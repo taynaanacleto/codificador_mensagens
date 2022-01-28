@@ -32,7 +32,7 @@ function criptografy() {
     exibeCripto.value = textoCriptografado;
 }
 
-/* evento de click do botão criptografar */
+/******** botão criptografar **********/
 var btnCripto = document.querySelector('button');
 
 btnCripto.addEventListener('click', function (e) {
@@ -44,60 +44,38 @@ btnCripto.addEventListener('click', function (e) {
 /******** Função de Descriptografia *********/
 function converteTexto(textoCapturado){
     
-    return textoCapturado.replaceAll('ai','a').replaceAll('enter','e').replaceAll('ims','i').replaceAll('ober','o').replaceAll('ufat','u');
+    return textoCapturado.replaceAll('ai','a')
+                         .replaceAll('enter','e')
+                         .replaceAll('ims','i')
+                         .replaceAll('ober','o')
+                         .replaceAll('ufat','u');
 
  }
 
+/********* botão descriptografar **********/
+var btnDescripto = document.getElementById('btn-descripto');
 
-
-/* evento de click do botão descriptografar */
-var btnDescripografar = document.getElementById('btn-descripto');
-
-btnDescripografar.addEventListener('click', function(e){
+btnDescripto.addEventListener('click', function(e){
     e.preventDefault();
 
     let textoCapturado = document.getElementById('input-texto').value;
     
     let exibeDesCripto = document.getElementById('msg');
-    //console.log(exibeDesCripto)
+    
     exibeDesCripto.value = converteTexto(textoCapturado);
 })
 
+// var btnCopy = document.getElementById('copiar');
+
+/*****  função copiar ******/
+ btnCopy.addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('msg').select();
+     document.execCommand('copy');
 
 
+function copyText() {
+    var copyText = document.getElementById("msg");
+    navigator.clipboard.writeText(copyText.value);
 
-
-
-
-
-
-
-
-// function converteTexto(textoCapturado){
-
-//     let textoValue = document.querySelector('input').value; //valor do texto capturado
-//     let arrayText = textoValue.split(''); // separação texto por array
-//     let textoDescriptografado;
-
-//     for (var i = 0; i < arrayText.length; i++) {
-    
-//         if (arrayText[i] == 'ai') {
-//             arrayText[i] = 'a'
-//         }
-//         else if (arrayText[i] == 'enter') {
-//             arrayText[i] = 'e'
-//         }
-//         else if (arrayText[i] == 'imes') {
-//             arrayText[i] = 'i'
-//         }
-//         else if (arrayText[i] == 'ober') {
-//             arrayText[i] = 'o'
-//         }
-//         else if (arrayText[i] == 'ufat') {
-//             arrayText[i] = 'u'
-//         }
-//     }
-
-//    
-
-//     }
+     }
